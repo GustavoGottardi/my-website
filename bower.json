@@ -1,0 +1,25 @@
+{
+  "name": "My Personal Website",
+  "homepage": "https://github.com/GustavoGottardi/my-website",
+  "authors": [
+    "Gustavo GOttardi"
+  ],
+  "description": "My personal website",
+  "main": "index.html",
+  "keywords": [
+    "gustavo",
+    "gottardi",
+    "website",
+    "front-end"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
