@@ -39,15 +39,15 @@ module.exports = function(grunt) {
 
        // Compiles Sass to CSS and generates necessary files if requested
       compass: {
-           build: {
-             options: {
+         build: {
+            options: {
                sassDir: './app/assets/styles/', //Get all SASS
                cssDir: './app/assets/css', //Dist finish CSS
                outputStyle:"compressed", //Compact CSS
                relativeAssets:true,
                raw: "preferred_syntax = :sass\n",
-             }
-           }
+            }
+         }
       },
 
       cssmin: {

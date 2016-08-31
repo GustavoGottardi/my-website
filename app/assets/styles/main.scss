@@ -3,3 +3,12 @@
 
 // Normalize
 @import "../../../node_modules/normalize.css/normalize.css";
+
+//Customs imports
+@import 
+"./variables",
+"./types",
+"./placeholders",
+"./functions",
+"./mixins",
+"./page";
