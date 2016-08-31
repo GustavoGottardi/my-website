@@ -6,8 +6,8 @@
 	z-index: 10;
 	.gg-nav-menu{
 		ul{
-			padding: 0 30px;
-			@extend %float-left;
+			padding: 0 2%;
+			@extend %float-right;
 			li{
 				@extend %inline-block;
 				a{
@@ -19,6 +19,9 @@
 					&:first-child{
 						padding-left: 0;
 					}
+					&:hover{
+						color: $green-logo;
+					}
 				}
 			}
 		}
@@ -28,11 +31,19 @@
 			color: $white;
 			font-weight: bold;
 			text-decoration: none;
-			top: 13px;
-			left: 50%;
+			top: 8px;
+			left: 8%;
 			margin-left: -81px;
 			span{
 				color: $green-logo;
+			}
+			&:after{
+				content: 'web developer';
+				position: absolute;
+				bottom: -11px;
+				right: 0px;
+				font-size: 10px;
+				letter-spacing: 0.05em;
 			}
 		}
 	}
@@ -41,6 +52,10 @@
 section{
 	@extend %position-relative;
 	background-color: $white;
+	padding: 60px 0 5px;
+	&:first-child{
+		padding: 0;
+	}
 	&.gg-home{
 		.gg-content{
 			width: 100%;
@@ -50,7 +65,7 @@ section{
 				@extend %position-fixed;
 				width: 100%;
 				height: 100%;
-				background: url('../images/bg-home-top.jpg') top center no-repeat;
+				background: url('../images/bg-home-top.jpg') 0 -75px no-repeat;
 				z-index: 0;
 				background-size: cover;
 				&:after{
@@ -72,10 +87,9 @@ section{
 				width: 200px;
 				height: 200px;
 				left: 50%;
-				top: 35%;
+				top: 30%;
 				margin-left: -100px;
 				z-index: 1;
-				border: 1px solid $white;
 				@include css3-prefix('border-radius','50%');
 				&:hover{
 					.gg-profile-figure{
@@ -108,7 +122,7 @@ section{
 			}
 			.gg-social-media{
 				@extend %position-relative;
-				top: 38%;
+				top: 34%;
 				ul{
 					padding: 0;
 					@extend %text-center;
@@ -116,20 +130,50 @@ section{
 						@extend %position-relative;
 						@extend %inline-block;
 						margin: 0 20px;
-						padding: 8px 8px 4px;
+						padding: 7px 10px 5px;
 						background: $white;
 						@include css3-prefix('border-radius','50%');
 						@include css3-prefix('transition','top 0.5s linear 0.1s');
 						top: 0;
+						cursor: pointer;
 						&:hover{
 							background: $green-logo;
 							@include css3-prefix('transition','background 0.3s linear 0.1s');
 							@include animation('seconds infinite 1s');
 							top: -8px;
 						}
+						a{
+							font-size: 20px;
+							color: $black;
+						}
 					}
 				}
 			}
 		}
+	}
+
+	&.skills{
+		ul{
+			li{
+				width: 33%;
+				zoom: 1;
+				@extend %inline-block;
+				@extend %position-relative;
+				&:before{
+					content: "";
+					width: 5px;
+					height: 5px;
+					position: absolute;
+					top: 6px;
+					left: -17px;
+					background-color: #000000;
+					@include css3-prefix('border-radius','50%');
+				}
+			}
+		}
+	}
+	.gg-container{
+		width: 700px;
+		margin: 0 auto;
 	}
 }
