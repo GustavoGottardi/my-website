@@ -1,0 +1,70 @@
+@media screen and (max-width: 700px) {
+	ul{
+		padding: 0 20px;
+	}
+
+	.gg-header{
+		.gg-nav-menu{
+			width: 100%;
+			ul{
+				// display: none;
+				position: absolute;
+				width: 100%;
+				height: 100vh;
+				background: rgba(0,0,0,0.7);
+				margin: -1px 0 0 0;
+				padding: 0;
+				z-index: 10;
+				right: -100%;
+				-webkit-transition: right 0.5s ease-in 0.5s;
+				transition: right 0.5s ease-in 0.5s;
+				&.open{
+					right: 0;
+				}
+				li{
+					display: block;
+					a{
+						font-size: 1.2em;
+						display: block;
+						padding: 10px 20px;
+						&:first-child{
+							padding-left: 20px;
+						}
+					}
+					&:hover{
+						background: rgba(157,228,4,0.5)
+					}
+				}
+			}
+		}
+		.gg-menu-mobile{
+			display: inline-block;
+		}
+	}
+	section{
+		padding: 25px 0 5px;
+		&.gg-home{
+			.gg-content{
+				min-height: 440px;
+				height: 100%;
+				.gg-bg-fixed-top{
+					background-position: 0 -55px;
+				}
+				.gg-profile{
+					padding-top: 110px;
+				}
+			}
+		}
+		&.skills{
+			ul{
+				li{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.gg-container{
+		width: 90%;
+		padding: 0 5%;
+	}
+}

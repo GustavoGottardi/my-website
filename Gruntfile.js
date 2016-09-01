@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
       browserify: {
          development: {
-            src: ["./app/assets/scripts/init.js","./app/assets/scripts/route.js","./app/assets/scripts/main.js"],
+            src: ["./app/assets/scripts/main.js"],
             dest: './app/assets/scripts/main.min.js',
             options: {
                browserifyOptions: { debug: true },

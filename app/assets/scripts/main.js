@@ -1,5 +1,8 @@
-import Router from './router.js';
-import Init from './init.js';
+/* jshint browser: true */
 
-new Router();
-new Init();
+function actionMenu(){
+	document.getElementById("gg-menu").classList.toggle("open");
+	document.getElementById("gg-menu-mobile").classList.toggle("opened");
+}
+
+document.getElementById("gg-menu-mobile").addEventListener("click", actionMenu);

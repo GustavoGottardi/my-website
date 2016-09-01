@@ -2,12 +2,38 @@
 	@extend .full-width;
 	@extend %position-fixed;
 	top: 0;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.7);
 	z-index: 10;
+	height: 60px;
+	.gg-logo{
+		@extend %position-relative;
+		@extend %inline-block;
+		font-size: 1.25em;
+		font-weight: bold;
+		top: 14px;
+		margin-left: 20px;
+		a{
+			text-decoration: none;
+			color: $white;
+			span{
+				color: $green-logo;
+			}
+		}
+		&:after{
+			content: 'web developer';
+			position: absolute;
+			bottom: -11px;
+			right: 0px;
+			font-size: 0.5em;
+			letter-spacing: 0.05em;
+		}
+	}
 	.gg-nav-menu{
+		@extend %position-relative;
+		@extend %inline-block;
+		@extend %float-right;
 		ul{
-			padding: 0 2%;
-			@extend %float-right;
+			margin: 21px 0 10px;
 			li{
 				@extend %inline-block;
 				a{
@@ -15,7 +41,7 @@
 					text-decoration: none;
 					color: $white;
 					text-transform: uppercase;
-					font-size: 14px;
+					font-size: 0.8em;
 					&:first-child{
 						padding-left: 0;
 					}
@@ -24,26 +50,39 @@
 					}
 				}
 			}
-		}
-		.gg-logo{
-			@extend %position-fixed;
-			font-size: 20px;
-			color: $white;
-			font-weight: bold;
-			text-decoration: none;
-			top: 8px;
-			left: 8%;
-			margin-left: -81px;
-			span{
-				color: $green-logo;
+			.gg-menu-close{
+				@extend %position-absolute;
+				top: 7px;
+				right: 20px;
+				color: $white;
+				z-index: 50;
+				font-size: 1.5em;
+				text-decoration: none;
+				font-weight: bold;
 			}
-			&:after{
-				content: 'web developer';
-				position: absolute;
-				bottom: -11px;
-				right: 0px;
-				font-size: 10px;
-				letter-spacing: 0.05em;
+		}
+	}
+	.gg-menu-mobile{
+		@extend %display-none;
+		@extend %float-right;
+		width: 35px;
+		margin: 14px;
+		span{
+			@extend %position-relative;
+			@extend %display-block;
+			width: 100%;
+			height: 3px;
+			margin: 6px 0;
+			background-color: $white;
+		}
+		&.opened{
+			.translate{
+				&:first-child{
+					@include css3-prefix('transform','rotateY(18deg)');
+				}
+				&:last-child{
+					@include css3-prefix('transform','rotateY(-18deg)');
+				}
 			}
 		}
 	}
@@ -84,13 +123,12 @@ section{
 				@extend %text-center;
 				@extend %position-relative;
 				@include css3-prefix('perspective','1000');
+				@include css3-prefix('border-radius','50%');
 				width: 200px;
 				height: 200px;
-				left: 50%;
-				top: 30%;
-				margin-left: -100px;
+				margin: 0 auto;
 				z-index: 1;
-				@include css3-prefix('border-radius','50%');
+				padding-top: 200px;
 				&:hover{
 					.gg-profile-figure{
 						@include css3-prefix('transform','rotateY(180deg)');
@@ -120,38 +158,8 @@ section{
 					}
 				}
 			}
-			.gg-social-media{
-				@extend %position-relative;
-				top: 34%;
-				ul{
-					padding: 0;
-					@extend %text-center;
-					li{
-						@extend %position-relative;
-						@extend %inline-block;
-						margin: 0 20px;
-						padding: 7px 10px 5px;
-						background: $white;
-						@include css3-prefix('border-radius','50%');
-						@include css3-prefix('transition','top 0.5s linear 0.1s');
-						top: 0;
-						cursor: pointer;
-						&:hover{
-							background: $green-logo;
-							@include css3-prefix('transition','background 0.3s linear 0.1s');
-							@include animation('seconds infinite 1s');
-							top: -8px;
-						}
-						a{
-							font-size: 20px;
-							color: $black;
-						}
-					}
-				}
-			}
 		}
 	}
-
 	&.skills{
 		ul{
 			li{
@@ -172,8 +180,45 @@ section{
 			}
 		}
 	}
-	.gg-container{
-		width: 700px;
-		margin: 0 auto;
+
+}
+.gg-container,
+.gg-content{
+	width: 700px;
+	margin: 0 auto;
+	.gg-social-media{
+		@extend %position-relative;
+		margin-top: 35px;
+		ul{
+			padding: 0;
+			@extend %text-center;
+			li{
+				@extend %position-relative;
+				@extend %inline-block;
+				margin: 0 20px;
+				padding: 7px 10px 5px;
+				background: $white;
+				@include css3-prefix('border-radius','50%');
+				@include css3-prefix('transition','top 0.5s linear 0.1s');
+				top: 0;
+				cursor: pointer;
+				&:hover{
+					background: $green-logo;
+					@include css3-prefix('transition','background 0.3s linear 0.1s');
+					@include animation('seconds infinite 1s');
+					top: -8px;
+				}
+				a{
+					font-size: 1.25em;
+					color: $black;
+				}
+			}
+		}
 	}
+}
+
+footer{
+	@extend %position-relative;
+    padding: 1px 0 10px;
+    background: #ccc;
 }
