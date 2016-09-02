@@ -16,8 +16,8 @@
 				padding: 0;
 				z-index: 10;
 				right: -100%;
-				-webkit-transition: right 0.5s ease-in 0.5s;
-				transition: right 0.5s ease-in 0.5s;
+				transition: right 0.5s ease-in 0.3s;
+				-webkit-transition: right 0.5s ease-in 0.3s;
 				&.open{
 					right: 0;
 				}
@@ -42,7 +42,7 @@
 		}
 	}
 	section{
-		padding: 25px 0 5px;
+		padding: 60px 0 5px;
 		&.gg-home{
 			.gg-content{
 				min-height: 440px;
@@ -55,7 +55,7 @@
 				}
 			}
 		}
-		&.skills{
+		&.gg-skills{
 			ul{
 				li{
 					width: 100%;

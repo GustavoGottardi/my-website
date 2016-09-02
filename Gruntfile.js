@@ -106,7 +106,7 @@ module.exports = function(grunt) {
          },
          js: {
            files: ['./app/assets/**/*.js'], //View all files JS
-           tasks: ['uglify','jshint'],
+           tasks: ['browserify','uglify','jshint'],
          },    
          html: {
            files: ['./app/views/*.html'],
