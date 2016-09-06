@@ -8,11 +8,11 @@
 	// Feature Test
     if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
 	
-		//Function to toggle menu mobile
-		function actionMenu(){
+		// Function to toggle menu mobile
+		let actionMenu = function(){
 			document.getElementById("gg-menu").classList.toggle("open");
 			document.getElementById("gg-menu-mobile").classList.toggle("opened");
-		}
+		};
 
 		document.getElementById("gg-menu-mobile").addEventListener("click", actionMenu);
 
@@ -84,6 +84,13 @@
             }, false);
 
         });
+
+        // Inject service worker when supported
+        if('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('/service-worker.js')
+				.then(function() { console.log('Service Worker registered'); });
+		}
     }
 
 })();

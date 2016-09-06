@@ -1,0 +1,29 @@
+{
+  "name": "Gustavo Gottardi",
+  "short_name": "Gustavo Gottardi",
+  "icons": [{
+    "src": "assets/images/favicon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/favicon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/favicon.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#9de404",
+  "theme_color": "#cccccc"
+}
