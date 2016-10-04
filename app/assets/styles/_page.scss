@@ -33,7 +33,7 @@
 		@extend %inline-block;
 		@extend %float-right;
 		ul{
-			margin: 21px 0 10px;
+			margin: 15px 0 10px;
 			li{
 				@extend %inline-block;
 				a{
@@ -191,24 +191,24 @@ section{
 			padding: 0;
 			@extend %text-center;
 			li{
-				@extend %position-relative;
 				@extend %inline-block;
-				margin: 0 20px;
-				padding: 7px 10px 5px;
-				background: $white;
-				@include css3-prefix('border-radius','50%');
-				@include css3-prefix('transition','top 0.5s linear 0.1s');
-				top: 0;
-				cursor: pointer;
-				&:hover{
-					background: $green-logo;
-					@include css3-prefix('transition','background 0.3s linear 0.1s');
-					@include animation('seconds infinite 1s');
-					top: -8px;
-				}
 				a{
+					@extend %position-relative;
+					margin: 0 20px;
+					background: $white;
+					top: 0;
+					cursor: pointer;
 					font-size: 1.25em;
 					color: $black;
+					padding: 7px 8px 7px 10px;
+					@include css3-prefix('border-radius','50%');
+					@include css3-prefix('transition','top 0.5s linear 0.1s');
+					&:hover{
+						background: $green-logo;
+						top: -8px;
+						@include css3-prefix('transition','background 0.3s linear 0.1s');
+						@include animation('seconds infinite 1s');
+					}
 				}
 			}
 		}
